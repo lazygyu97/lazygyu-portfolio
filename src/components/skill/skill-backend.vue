@@ -4,71 +4,48 @@
       <img src="/src/assets/api.png" />
       <h1>Backend</h1>
     </div>
-    <div class="detail-skill">a</div>
-    <div class="detail-skill">b</div>
-    <div class="detail-skill">c</div>
-    <div class="detail-skill">d</div>
+    <div class="skill-list">
+      <div class="detail-skill">Spring Boot</div>
+      <div class="detail-skill">Spring Security</div>
+      <div class="detail-skill">Lombok</div>
+      <div class="detail-skill">Redis</div>
+      <div class="detail-skill">JPA</div>
+      <div class="detail-skill">RestTemplate</div>
+      <div class="detail-skill">···</div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import "@/styles/detail-skill.scss"; // CSS 파일을 import
+</script>
 
 <style scoped>
-.skill {
-  display: flex; /* 한 줄로 정렬 */
-  align-items: flex-start; /* 수직 가운데 정렬 */
-
-  gap: 20px; /* 요소 간 간격 */
-
-  width: 80%;
-}
-
-.language {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-  flex-shrink: 0;
-  width: 10rem;
-  font-weight: 900;
-  height: 100%;
-}
-
-.language > img {
-  width: 30px;
-}
-
-.language > h1 {
-  margin: 0; /* 기본 마진 제거 */
-  font-size: 20px;
-}
-
-.detail-skill {
-  display: inline-flex; /* 텍스트 길이에 따라 크기 조정 가능 */
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  width: auto; /* 텍스트 길이에 따라 너비 조정 */
-  height: 35px;
-  border-radius: 10px; /* 둥근 모서리 */
-  color: white; /* 텍스트 색상 */
-  font-weight: bold; /* 텍스트 강조 */
-  padding: 0 20px; /* 좌우 여백 추가 */
-  text-align: center;
-  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+.detail-skill:nth-child(1) {
+  background-color: #4caf50; /* 초록: Spring Boot */
 }
 
 .detail-skill:nth-child(2) {
-  background-color: #ff6b6b; /* 빨강 */
+  background-color: #6bc7eb; /* 파랑: Spring Security */
 }
 
 .detail-skill:nth-child(3) {
-  background-color: #6bcff6; /* 파랑 */
+  background-color: #ff6b6b; /* 빨강: Lombok */
 }
 
 .detail-skill:nth-child(4) {
-  background-color: #ffd93d; /* 노랑 */
+  background-color: #ff7043; /* 오렌지: Redis */
 }
 
 .detail-skill:nth-child(5) {
-  background-color: #81c784; /* 초록 */
+  background-color: #4caf50; /* 진한 초록: JPA */
+}
+
+.detail-skill:nth-child(6) {
+  background-color: #2196f3; /* 깊은 파랑: RestTemplate */
+}
+
+.detail-skill:nth-child(7) {
+  background-color: #9e9e9e; /* 회색: 기타 */
 }
 </style>

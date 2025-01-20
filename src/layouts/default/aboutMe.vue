@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #fbfbfb">
+  <div class="top-container">
     <div class="custom-container">
       <div style="margin-bottom: 100px"><h1>ABOUT ME</h1></div>
       <div class="introduce-layer">
@@ -27,11 +27,14 @@ import Study from "@/components/introduce/study.vue";
 </script>
 
 <style scoped>
+.top-container {
+  width: 100%;
+  background-color: #fbfbfb;
+}
 .custom-container {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1550px;
-  background-color: #fbfbfb;
   /* Flexbox 설정 */
   display: flex;
   flex-direction: column;

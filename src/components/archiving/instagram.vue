@@ -1,13 +1,13 @@
 <template>
   <div class="board-layer">
     <div class="image-container">
-      <img src="/src/assets/github.png" alt="Background Image" />
+      <img src="/src/assets/instagram.png" alt="Background Image" />
     </div>
     <div class="link-container">
-      <a href="https://github.com/lazygyu97" class="link">자세히 보기</a>
+      <a href="https://www.instagram.com/hg._.low" class="link">자세히 보기</a>
     </div>
     <div class="description-container">
-      <p class="description">진행한 프로젝트 소스 코드 저장소</p>
+      <p class="description">취미 생활 기록 SNS</p>
     </div>
   </div>
 </template>

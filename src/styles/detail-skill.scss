@@ -1,0 +1,86 @@
+.skill {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 80%;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  flex-shrink: 0;
+  width: 10rem;
+  height: 100%;
+  font-weight: 900;
+}
+
+.language > img {
+  width: 30px;
+}
+
+.language > h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap; /* 자식 요소들이 자동으로 줄 바꿈 */
+  width: 100%; /* 100%로 설정해 전체 공간을 차지하도록 */
+}
+
+.detail-skill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 35px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 0 20px;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+@media (max-width: 1440px) {
+  .skill-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill {
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .skill-list {
+    width: 100%;
+  }
+
+  .detail-skill {
+    width: auto;
+    height: 30px; /* 높이를 더 작게 설정 */
+    padding: 0 10px; /* 좌우 여백을 절반으로 줄임 */
+    font-size: 12px; /* 글자 크기를 작게 설정 */
+    margin-right: 3px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .skill {
+    gap: 15px;
+  }
+
+  .detail-skill {
+    width: auto;
+    height: 30px; /* 높이를 더 작게 설정 */
+    padding: 0 10px; /* 좌우 여백을 절반으로 줄임 */
+    font-size: 12px; /* 글자 크기를 작게 설정 */
+    margin-right: 3px;
+  }
+}

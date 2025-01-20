@@ -4,7 +4,9 @@
       <img src="/src/assets/youtube.png" alt="Background Image" />
     </div>
     <div class="link-container">
-      <a href="#" class="link">자세히 보기</a>
+      <a href="https://www.youtube.com/@LazyGyu-g2t" class="link"
+        >자세히 보기</a
+      >
     </div>
     <div class="description-container">
       <p class="description">진행한 프로젝트 시연 영상</p>
@@ -17,7 +19,8 @@
 <style scoped>
 .board-layer {
   /* 부모 컨테이너 스타일 */
-  width: 30%;
+  width: 100%; /* 너비를 100%로 설정하여 유동적으로 변경 */
+  max-width: 400px; /* 최대 너비 설정 */
   height: 400px;
   background: #ffffff;
   border-radius: 20px;
@@ -25,6 +28,8 @@
   flex-direction: column; /* 수직 배치 */
   align-items: flex-start; /* 자식 요소 좌측 정렬 */
   padding: 20px; /* 내부 여백 */
+  box-sizing: border-box; /* 여백이 전체 크기에 포함되도록 설정 */
+  margin-bottom: 20px; /* 카드 간 간격 */
 }
 
 .image-container img {
@@ -33,6 +38,7 @@
   object-fit: contain; /* 비율을 유지하면서 지정된 높이와 너비에 맞춤 */
   border-radius: 10px; /* 이미지 둥근 모서리 */
 }
+
 .link-container {
   margin-top: 20px; /* 이미지와 링크 간격 */
 }
@@ -56,5 +62,21 @@
   color: #333333; /* 텍스트 색상 */
   font-size: 14px; /* 글꼴 크기 */
   line-height: 1.5; /* 줄 간격 */
+}
+
+/* 반응형 설정: 화면이 600px 이하일 때 */
+@media (max-width: 600px) {
+  .board-layer {
+    width: 100%; /* 화면이 좁을 때 카드의 너비를 100%로 설정 */
+    margin-bottom: 20px; /* 카드 간 간격 */
+  }
+
+  .image-container img {
+    height: 120px; /* 작은 화면에서는 이미지의 높이를 줄임 */
+  }
+
+  .description {
+    font-size: 12px; /* 작은 화면에서는 글자 크기를 줄임 */
+  }
 }
 </style>

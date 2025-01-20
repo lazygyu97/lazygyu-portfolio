@@ -1,25 +1,37 @@
 <template>
   <div class="custom-container">
-    <div style="margin-bottom: 100px"><h1>PROJECTS</h1></div>
-    <v-row class="projects" justify="center">
+    <div style="margin-bottom: 20px; margin-top: 80px"><h1>PROJECTS</h1></div>
+
+    <v-row class="projects" justify="center" wrap>
+      <!-- 각 카드 컴포넌트를 v-col로 감싸기 -->
       <v-col v-for="n in 6" :key="n" cols="12" sm="6" md="4">
-        <v-card>
-          <v-card-title>Project {{ n }}</v-card-title>
-          <v-card-subtitle>Subtitle for Project {{ n }}</v-card-subtitle>
-          <v-card-text> Description of Project {{ n }} goes here. </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary">View Details</v-btn>
-          </v-card-actions>
-        </v-card>
+        <!-- 각 프로젝트 컴포넌트 -->
+        <component :is="'Project' + n" />
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script setup>
-// Vuetify 컴포넌트 자동 임포트가 활성화되어 있다면 별도의 임포트는 필요없습니다.
-// 그러나 명시적으로 컴포넌트를 임포트해야 하는 경우 아래와 같이 작성합니다.
-// import { VRow, VCol, VCard, VCardTitle, VCardSubtitle, VCardText, VCardActions, VBtn } from 'vuetify/lib';
+// 각 프로젝트 컴포넌트를 임포트합니다.
+import Project1 from "@/components/projects/project1.vue";
+import Project2 from "@/components/projects/project2.vue";
+import Project3 from "@/components/projects/project3.vue";
+import Project4 from "@/components/projects/project4.vue";
+import Project5 from "@/components/projects/project5.vue";
+import Project6 from "@/components/projects/project6.vue";
+
+// 컴포넌트 등록
+defineOptions({
+  components: {
+    Project1,
+    Project2,
+    Project3,
+    Project4,
+    Project5,
+    Project6,
+  },
+});
 </script>
 
 <style scoped>
@@ -27,13 +39,31 @@
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1550px;
-
-  /* Flexbox 설정 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  min-height: 97vh; /* 화면을 벗어나지 않도록 설정 */
+}
+
+.projects {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 각 카드 컴포넌트의 스타일 */
+.v-col {
+  margin-bottom: 30px;
+}
+
+/* 미디어 쿼리: 작은 화면에서 한 줄에 하나씩 보이도록 설정 */
+@media (max-width: 600px) {
+  .v-col {
+    max-width: 100%; /* 한 줄에 하나씩 표시되도록 설정 */
+    padding: 0 10px; /* 카드 간 간격 조정 */
+  }
 }
 </style>

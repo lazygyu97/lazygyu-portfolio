@@ -1,9 +1,9 @@
 <template>
   <div class="profile-container">
-    <img src="/src/assets/user.png" class="profile-img" />
+    <img src="/src/assets/location.png" class="profile-img" />
     <div class="profile-text">
-      <h1>이름</h1>
-      <h1>박현규</h1>
+      <h1>위치</h1>
+      <h1>인천광역시 계양구</h1>
     </div>
   </div>
 </template>

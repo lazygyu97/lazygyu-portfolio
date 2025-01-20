@@ -52,12 +52,22 @@
   }
 
   .profile-img {
-    width: 100px; /* 이미지 크기 조정 */
-    height: 100px; /* 이미지 크기 조정 */
+    width: 70px; /* 이미지 크기 조정 */
+    height: 70px; /* 이미지 크기 조정 */
   }
 
   .profile-text h1 {
     font-size: 1rem; /* 텍스트 크기 조정 */
+  }
+
+  .profile-text h1:first-of-type {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .profile-text h1:last-of-type {
+    font-weight: normal;
+    text-align: center;
   }
 }
 /* 화면 너비가 480px 이하일 때 적용 */

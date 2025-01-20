@@ -14,7 +14,7 @@
 <style scoped>
 .bottom {
   width: 100%;
-  height: 7vh;
+  height: 3vh;
   background-color: rgb(33, 33, 33);
   text-align: center;
   color: white;
@@ -25,5 +25,15 @@
 
 .bottom-txt {
   font-size: 12px; /* 원하는 글자 크기 입력 */
+}
+@media (max-width: 768px) {
+  .bottom-txt {
+    font-size: 9px; /* 원하는 글자 크기 입력 */
+  }
+}
+@media (max-width: 600px) {
+  .bottom-txt {
+    font-size: 5px; /* 원하는 글자 크기 입력 */
+  }
 }
 </style>
