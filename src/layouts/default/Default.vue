@@ -63,15 +63,15 @@ const handleScroll = (e) => {
   showScrollTop.value = e.target.scrollTop > 200; // main-container 스크롤 확인
 };
 
-// onMounted(() => {
-//   const mainContainer = document.querySelector(".main-container");
-//   mainContainer.addEventListener("scroll", handleScroll);
-// });
+onMounted(() => {
+  const mainContainer = document.querySelector(".main-container");
+  mainContainer.addEventListener("scroll", handleScroll);
+});
 
-// onBeforeUnmount(() => {
-//   const mainContainer = document.querySelector(".main-container");
-//   mainContainer.removeEventListener("scroll", handleScroll);
-// });
+onBeforeUnmount(() => {
+  const mainContainer = document.querySelector(".main-container");
+  mainContainer.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
