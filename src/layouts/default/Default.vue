@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, watch } from "vue";
 
 import DefaultBar from "./AppBar.vue";
 import MiddleArea1 from "./topImageBar.vue";
@@ -41,6 +41,9 @@ import BottomBar from "./bottom-bar.vue";
 
 // 스크롤 상태
 const showScrollTop = ref(false);
+
+// 화면 크기 상태
+const isMobile = ref(false);
 
 // 최상단으로 스크롤 이동 함수
 const scrollToTop = () => {
@@ -63,14 +66,27 @@ const handleScroll = (e) => {
   showScrollTop.value = e.target.scrollTop > 200; // main-container 스크롤 확인
 };
 
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768; // 768px 이하일 때 모바일 화면으로 간주
+};
+
 onMounted(() => {
-  const mainContainer = document.querySelector(".main-container");
-  mainContainer.addEventListener("scroll", handleScroll);
+  checkMobile(); // 초기 화면 크기 확인
+  if (!isMobile.value) {
+    const mainContainer = document.querySelector(".main-container");
+    mainContainer.addEventListener("scroll", handleScroll);
+  }
+
+  // 창 크기 변경 시 모바일 상태 업데이트
+  window.addEventListener("resize", checkMobile);
 });
 
 onBeforeUnmount(() => {
-  const mainContainer = document.querySelector(".main-container");
-  mainContainer.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", checkMobile);
+  if (!isMobile.value) {
+    const mainContainer = document.querySelector(".main-container");
+    mainContainer.removeEventListener("scroll", handleScroll);
+  }
 });
 </script>
 
