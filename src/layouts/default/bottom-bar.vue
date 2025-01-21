@@ -24,11 +24,11 @@
 }
 
 .bottom-txt {
-  font-size: 12px; /* 원하는 글자 크기 입력 */
+  font-size: 10px; /* 원하는 글자 크기 입력 */
 }
 @media (max-width: 768px) {
   .bottom-txt {
-    font-size: 9px; /* 원하는 글자 크기 입력 */
+    font-size: 8px; /* 원하는 글자 크기 입력 */
   }
 }
 @media (max-width: 600px) {

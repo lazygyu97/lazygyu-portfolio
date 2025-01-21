@@ -43,6 +43,7 @@
   text-align: center;
   white-space: nowrap;
   margin-right: 5px;
+  font-size: 0.9rem !important;
 }
 
 @media (max-width: 1440px) {
@@ -66,7 +67,7 @@
     width: auto;
     height: 30px; /* 높이를 더 작게 설정 */
     padding: 0 10px; /* 좌우 여백을 절반으로 줄임 */
-    font-size: 12px; /* 글자 크기를 작게 설정 */
+    font-size: 12px !important; /* 글자 크기를 작게 설정 */
     margin-right: 3px;
     margin-bottom: 20px;
   }
@@ -80,7 +81,7 @@
     width: auto;
     height: 30px; /* 높이를 더 작게 설정 */
     padding: 0 10px; /* 좌우 여백을 절반으로 줄임 */
-    font-size: 12px; /* 글자 크기를 작게 설정 */
+    font-size: 12px !important; /* 글자 크기를 작게 설정 */
     margin-right: 3px;
   }
 }

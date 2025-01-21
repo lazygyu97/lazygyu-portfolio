@@ -65,12 +65,30 @@ const handleScroll = (e) => {
 
 onMounted(() => {
   const mainContainer = document.querySelector(".main-container");
-  mainContainer.addEventListener("scroll", handleScroll);
+
+  const updateScrollBehavior = () => {
+    if (window.innerWidth <= 1310) {
+      // 모바일 화면에서는 scroll-snap 기능 비활성화
+      mainContainer.style.scrollSnapType = "none";
+      mainContainer.removeEventListener("scroll", handleScroll);
+    } else {
+      // 데스크톱 화면에서는 scroll-snap 기능 활성화
+      mainContainer.style.scrollSnapType = "y mandatory";
+      mainContainer.addEventListener("scroll", handleScroll);
+    }
+  };
+
+  // 초기 설정
+  updateScrollBehavior();
+
+  // 창 크기 변경 시 동적으로 업데이트
+  window.addEventListener("resize", updateScrollBehavior);
 });
 
 onBeforeUnmount(() => {
   const mainContainer = document.querySelector(".main-container");
   mainContainer.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", updateScrollBehavior);
 });
 </script>
 
@@ -139,7 +157,7 @@ body {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* 모바일 화면에서 각 섹션 높이 조정 */
   .snap-section,
   .snap-section-big {
@@ -159,6 +177,9 @@ body {
     width: 40px;
     height: 40px;
     font-size: 16px;
+  }
+  .main-container {
+    scroll-snap-type: none; /* 모바일 화면에서는 스냅 비활성화 */
   }
 }
 

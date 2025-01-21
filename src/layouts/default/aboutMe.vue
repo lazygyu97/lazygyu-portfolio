@@ -1,7 +1,7 @@
 <template>
   <div class="top-container">
     <div class="custom-container">
-      <div style="margin-bottom: 100px"><h1>ABOUT ME</h1></div>
+      <div class="title"><h1>ABOUT ME</h1></div>
       <div class="introduce-layer">
         <Name />
         <Birth />
@@ -30,6 +30,9 @@ import Study from "@/components/introduce/study.vue";
 .top-container {
   width: 100%;
   background-color: #fbfbfb;
+}
+.title {
+  margin-bottom: 100px;
 }
 .custom-container {
   margin: 0 auto;
@@ -61,5 +64,16 @@ import Study from "@/components/introduce/study.vue";
 
 .introduce-layer > *:last-child {
   margin-right: 0; /* 마지막 요소 오른쪽 여백 없애기 */
+}
+
+@media (max-width: 768px) {
+  .introduce-layer {
+    margin-bottom: 50px; /* 첫 번째 요소 왼쪽 여백 없애기 */
+  }
+
+  .title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 </style>

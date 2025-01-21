@@ -74,7 +74,7 @@ import instagram from "@/components/archiving/instagram.vue";
 }
 
 /* 미디어 쿼리: 화면 크기가 768px 이하일 때 한 줄에 2개씩 배치 */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .board-container {
     flex-direction: row; /* 가로로 배치 */
     justify-content: space-between; /* 카드 간 간격을 일정하게 유지 */

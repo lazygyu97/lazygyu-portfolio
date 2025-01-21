@@ -13,7 +13,7 @@
     <hr />
     <div class="project-summary">
       <h5 class="project-subtitle">
-        “가는 길에, 가는 김에, 당신 곁에”이라는 슬로건으로 사용자들에게<br />새로운
+        “가는 길에, 가는 김에, 당신 곁에”이라는 슬로건으로 사용자들에게 새로운
         배송 플랫폼을 제공하는 안드로이드 어플리케이션 프로젝트.
       </h5>
       <ul class="project-details">

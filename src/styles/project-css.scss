@@ -126,6 +126,19 @@
   background-color: #ddd;
 }
 
+@media (max-width: 1450px) {
+  .detail-skill {
+    font-size: 12px !important;
+  }
+  .project-subtitle {
+    font-size: 0.8rem;
+  }
+  .project-details {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+}
+
 /* 반응형 웹 스타일 */
 @media (max-width: 768px) {
   .project-card {
@@ -146,19 +159,27 @@
   }
 
   .project-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .project-details {
     margin-left: 10px;
+    font-size: 0.9rem;
   }
-
+  .project-url {
+    font-size: 0.8rem;
+  }
   .project-url a {
     font-size: 0.8rem;
   }
 
   .project-tech-stacks {
     font-size: 0.8rem;
+  }
+
+  .detail-skill {
+    margin-right: 2px;
+    margin-bottom: 2px;
   }
 
   .project-btn-container {

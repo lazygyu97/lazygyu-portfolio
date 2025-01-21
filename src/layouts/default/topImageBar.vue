@@ -70,38 +70,59 @@
     font-size: 2rem; /* 작은 화면에서 폰트 크기 줄이기 */
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 969px) {
+  .top-img {
+    background-size: 100% auto; /* 이미지가 화면 크기에 맞게 조정 */
+    background-position: center 80%; /* 이미지 중앙에 위치 */
+  }
   .top-txt > h1 {
-    font-size: 1.5rem; /* 작은 화면에서 폰트 크기 줄이기 */
+    font-size: 1.7rem; /* 작은 화면에서 폰트 크기 줄이기 */
+  }
+}
+@media (max-width: 768px) {
+  .background-container {
+    height: 30vh;
+    position: relative; /* 자식의 위치 계산을 보조 */
+  }
+  .top-txt > h1 {
+    font-size: 1.3rem; /* 작은 화면에서 폰트 크기 줄이기 */
+  }
+  .top-txt {
+    height: 30vh;
   }
 
   .top-img {
     background-size: 100% auto; /* 이미지가 화면 크기에 맞게 조정 */
-    background-position: center 80%; /* 이미지 중앙에 위치 */
+    background-position: center 130%; /* 이미지 중앙에 위치 */
     width: 60%;
+    max-height: 30vh;
+    display: flex;
+  }
+}
+
+@media (max-width: 670px) {
+  .custom-container {
+    height: 28vh;
+  }
+  .background-container {
+    height: 28vh;
+  }
+
+  .top-txt > h1 {
+    font-size: 0.8rem; /* 작은 화면에서 폰트 크기 줄이기 */
+  }
+  .top-img {
+    background-size: auto 70%; /* 이미지가 화면 크기에 맞게 조정 */
+    background-position: center 80%; /* 이미지 중앙에 위치 */
+    width: 50%;
     height: 100%;
     display: flex;
   }
 }
 
-@media (max-width: 480px) {
-  .custom-container {
-    height: 30vh;
-  }
-  .background-container {
-    height: 30vh;
-  }
-
-  .top-txt > h1 {
-    font-size: 0.7rem; /* 작은 화면에서 폰트 크기 줄이기 */
-  }
+@media (max-width: 430px) {
   .top-img {
-    background-size: auto 50%; /* 이미지가 화면 크기에 맞게 조정 */
-    background-position: center 80%; /* 이미지 중앙에 위치 */
-    width: 50%;
-    height: 100%;
-    display: flex;
+    background-size: auto 60%; /* 이미지가 화면 크기에 맞게 조정 */
   }
 }
 </style>
