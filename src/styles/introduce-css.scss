@@ -22,7 +22,10 @@
   font-weight: bold;
   text-align: left;
 }
-
+.profile-text h1:nth-of-type(2) {
+  font-weight: normal;
+  text-align: left;
+}
 .profile-text h1:last-of-type {
   font-weight: normal;
   text-align: left;
@@ -64,7 +67,10 @@
     font-weight: bold;
     text-align: center;
   }
-
+  .profile-text h1:nth-of-type(2) {
+    font-weight: normal;
+    text-align: center;
+  }
   .profile-text h1:last-of-type {
     font-weight: normal;
     text-align: center;

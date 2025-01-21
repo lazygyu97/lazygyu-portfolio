@@ -4,6 +4,7 @@
     <div class="profile-text">
       <h1>학력</h1>
       <h1>한서대학교</h1>
+      <h1>(항공 소프트웨어 공학과)</h1>
     </div>
   </div>
 </template>
